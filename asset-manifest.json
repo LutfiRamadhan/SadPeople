@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/SadPeople/static/css/main.ee5f5c8f.chunk.css",
+    "main.js": "/SadPeople/static/js/main.3e944e6c.chunk.js",
+    "main.js.map": "/SadPeople/static/js/main.3e944e6c.chunk.js.map",
+    "runtime-main.js": "/SadPeople/static/js/runtime-main.3e144ef3.js",
+    "runtime-main.js.map": "/SadPeople/static/js/runtime-main.3e144ef3.js.map",
+    "static/css/2.1a02f21c.chunk.css": "/SadPeople/static/css/2.1a02f21c.chunk.css",
+    "static/js/2.cbc8fb3f.chunk.js": "/SadPeople/static/js/2.cbc8fb3f.chunk.js",
+    "static/js/2.cbc8fb3f.chunk.js.map": "/SadPeople/static/js/2.cbc8fb3f.chunk.js.map",
+    "index.html": "/SadPeople/index.html",
+    "static/css/2.1a02f21c.chunk.css.map": "/SadPeople/static/css/2.1a02f21c.chunk.css.map",
+    "static/css/main.ee5f5c8f.chunk.css.map": "/SadPeople/static/css/main.ee5f5c8f.chunk.css.map",
+    "static/js/2.cbc8fb3f.chunk.js.LICENSE.txt": "/SadPeople/static/js/2.cbc8fb3f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3e144ef3.js",
+    "static/css/2.1a02f21c.chunk.css",
+    "static/js/2.cbc8fb3f.chunk.js",
+    "static/css/main.ee5f5c8f.chunk.css",
+    "static/js/main.3e944e6c.chunk.js"
+  ]
+}
