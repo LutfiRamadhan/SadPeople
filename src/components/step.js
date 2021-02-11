@@ -152,6 +152,8 @@ function StepSix(props) {
     handleClick,
   } = props;
 
+  console.log(handleClick);
+
   const [pos, setPos] = useState(-250);
 
   const Baris1 = {
@@ -166,105 +168,112 @@ function StepSix(props) {
   const w = window.innerWidth;
   const sampai = w + 250;
   let movitmovit;
+
+  const [lay, setLay] = useState(false);
+
+  let layout = (
+    <>
+      <div className="row" style={(!lay) ? { display: 'none' } : { display: '' }}>
+        <p className="mx-auto">
+          Reloading Page..
+        </p>
+      </div>
+      <div className="row" style={(lay) ? { display: 'none' } : { display: '' }}>
+        <div className="col-md-12">
+          <div
+            className="row"
+            style={
+              {
+                overflow: 'hidden',
+                maxWidth: sampai,
+                maxHeight: '185px',
+              }
+            }
+          >
+            <div className="col-md-2 moving" style={Baris1}>
+              <img src="https://c.tenor.com/1RyBOGYiFroAAAAj/%E3%83%80%E3%83%B3%E3%82%B9-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
+            </div>
+            <div className="col-md-2 moving" style={Baris2}>
+              <img src="https://c.tenor.com/1RyBOGYiFroAAAAj/%E3%83%80%E3%83%B3%E3%82%B9-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
+            </div>
+          </div>
+        </div>
+        <div className="col-md-12">
+          <div
+            className="row"
+            style={
+              {
+                overflow: 'hidden',
+                maxWidth: sampai,
+                maxHeight: '185px',
+              }
+            }
+          >
+            <div className="col-md-2 moving" style={Baris1}>
+              <img src="https://c.tenor.com/1RyBOGYiFroAAAAj/%E3%83%80%E3%83%B3%E3%82%B9-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
+            </div>
+            <div className="col-md-2 moving" style={Baris2}>
+              <img src="https://c.tenor.com/1RyBOGYiFroAAAAj/%E3%83%80%E3%83%B3%E3%82%B9-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row" style={(lay) ? { display: 'none' } : { display: '' }}>
+        <div className="col-2">
+          <img src="https://c.tenor.com/GNiThyoqaXAAAAAj/%E3%81%8A%E3%82%81%E3%81%A7%E3%81%A8%E3%81%86-%E5%AC%89%E3%81%97%E3%81%84.gif" alt="kuy" />
+        </div>
+        <div className="col-2 offset-8">
+          <img src="https://c.tenor.com/GNiThyoqaXAAAAAj/%E3%81%8A%E3%82%81%E3%81%A7%E3%81%A8%E3%81%86-%E5%AC%89%E3%81%97%E3%81%84.gif" style={{ transform: 'scaleX(-1)' }} alt="kuy" />
+        </div>
+        <div className="col-2">
+          <img src="https://c.tenor.com/Aq48a65922EAAAAj/%E3%82%AF%E3%83%A9%E3%83%83%E3%82%AB%E3%83%BC-%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%83%BC.gif" alt="kuy" />
+        </div>
+        <div className="col-2">
+          <img src="https://c.tenor.com/mx-SCGnsQOEAAAAj/%E6%8B%8D%E6%89%8B-%E3%83%91%E3%83%81%E3%83%91%E3%83%81.gif" alt="kuy" />
+        </div>
+        <div className="col-2">
+          <img src="https://c.tenor.com/g7m_dcsETm4AAAAj/%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
+        </div>
+        <div className="col-2">
+          <img src="https://c.tenor.com/g7m_dcsETm4AAAAj/%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
+        </div>
+        <div className="col-2">
+          <img src="https://c.tenor.com/mx-SCGnsQOEAAAAj/%E6%8B%8D%E6%89%8B-%E3%83%91%E3%83%81%E3%83%91%E3%83%81.gif" alt="kuy" />
+        </div>
+        <div className="col-2">
+          <img src="https://c.tenor.com/Aq48a65922EAAAAj/%E3%82%AF%E3%83%A9%E3%83%83%E3%82%AB%E3%83%BC-%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%83%BC.gif" style={{ transform: 'scaleX(-1)' }} alt="kuy" />
+        </div>
+      </div>
+    </>
+  );
+
+  const redirectWoi = () => {
+    // window.open('http://febirthday.dondoitdev.tech', '_self');
+    setLay(true);
+    layout = 'Mengalihkan Duniamu...';
+    return false;
+  };
   const movit = () => {
     movitmovit = setTimeout(() => {
-      setPos(pos + 50);
+      setPos(pos + 10);
       if (pos >= w) {
+        window.open('http://febirthday.dondoitdev.tech', '_self');
+        // window.location = 'http://febirthday.dondoitdev.tech';
         clearTimeout(movitmovit);
-        window.location = 'http://google.com';
+        redirectWoi();
       } else {
         movitmovit = setTimeout(() => {
           movit();
           clearTimeout(movitmovit);
-        }, 1000);
+        }, 250);
       }
-    }, 500);
+    }, 10);
   };
   movit();
 
   return (
     <>
-      <div className="row">
-        <div className="col-md-12">
-          <div
-            className="row"
-            style={
-              {
-                overflow: 'hidden',
-                maxWidth: sampai,
-                maxHeight: '185px',
-              }
-            }
-          >
-            <div className="col-md-2 moving" style={Baris1}>
-              <img src="https://c.tenor.com/1RyBOGYiFroAAAAj/%E3%83%80%E3%83%B3%E3%82%B9-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
-            </div>
-            <div className="col-md-2 moving" style={Baris2}>
-              <img src="https://c.tenor.com/1RyBOGYiFroAAAAj/%E3%83%80%E3%83%B3%E3%82%B9-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
-            </div>
-          </div>
-        </div>
-        <div className="col-md-12">
-          <div
-            className="row"
-            style={
-              {
-                overflow: 'hidden',
-                maxWidth: sampai,
-                maxHeight: '185px',
-              }
-            }
-          >
-            <div className="col-md-2 moving" style={Baris1}>
-              <img src="https://c.tenor.com/1RyBOGYiFroAAAAj/%E3%83%80%E3%83%B3%E3%82%B9-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
-            </div>
-            <div className="col-md-2 moving" style={Baris2}>
-              <img src="https://c.tenor.com/1RyBOGYiFroAAAAj/%E3%83%80%E3%83%B3%E3%82%B9-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-2">
-          <img src="https://c.tenor.com/GNiThyoqaXAAAAAj/%E3%81%8A%E3%82%81%E3%81%A7%E3%81%A8%E3%81%86-%E5%AC%89%E3%81%97%E3%81%84.gif" alt="kuy" />
-        </div>
-        <div className="col-2">
-          <img src="https://c.tenor.com/VVfo_CpZiMMAAAAj/%E5%BF%9C%E6%8F%B4-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88.gif" alt="kuy" />
-        </div>
-        <div className="col-2">
-          <img src="https://c.tenor.com/g7m_dcsETm4AAAAj/%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
-        </div>
-        <div className="col-2">
-          <img src="https://c.tenor.com/g7m_dcsETm4AAAAj/%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
-        </div>
-        <div className="col-2">
-          <img src="https://c.tenor.com/VVfo_CpZiMMAAAAj/%E5%BF%9C%E6%8F%B4-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88.gif" alt="kuy" />
-        </div>
-        <div className="col-2">
-          <img src="https://c.tenor.com/GNiThyoqaXAAAAAj/%E3%81%8A%E3%82%81%E3%81%A7%E3%81%A8%E3%81%86-%E5%AC%89%E3%81%97%E3%81%84.gif" style={{ transform: 'scaleX(-1)' }} alt="kuy" />
-        </div>
-        <div className="col-md-2">
-          <img src="https://c.tenor.com/Aq48a65922EAAAAj/%E3%82%AF%E3%83%A9%E3%83%83%E3%82%AB%E3%83%BC-%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%83%BC.gif" alt="kuy" />
-        </div>
-        <div className="col-md-2">
-          <img src="https://c.tenor.com/mx-SCGnsQOEAAAAj/%E6%8B%8D%E6%89%8B-%E3%83%91%E3%83%81%E3%83%91%E3%83%81.gif" alt="kuy" />
-        </div>
-        <div className="col-md-2">
-          <img src="https://c.tenor.com/3zH9hK4bnrwAAAAj/%E8%83%B4%E4%B8%8A%E3%81%92-%E3%81%8A%E7%A5%9D%E3%81%84.gif" alt="kuy" />
-        </div>
-        <div className="col-md-2">
-          <img src="https://c.tenor.com/3zH9hK4bnrwAAAAj/%E8%83%B4%E4%B8%8A%E3%81%92-%E3%81%8A%E7%A5%9D%E3%81%84.gif" alt="kuy" />
-        </div>
-        <div className="col-md-2">
-          <img src="https://c.tenor.com/mx-SCGnsQOEAAAAj/%E6%8B%8D%E6%89%8B-%E3%83%91%E3%83%81%E3%83%91%E3%83%81.gif" alt="kuy" />
-        </div>
-        <div className="col-md-2">
-          <img src="https://c.tenor.com/Aq48a65922EAAAAj/%E3%82%AF%E3%83%A9%E3%83%83%E3%82%AB%E3%83%BC-%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%83%BC.gif" style={{ transform: 'scaleX(-1)' }} alt="kuy" />
-        </div>
-        <Button className="btn btn-dark" onClick={handleClick} variant="contained">
-          Panggil aku
-        </Button>
-      </div>
+      {layout}
     </>
   );
 }
