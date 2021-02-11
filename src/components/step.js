@@ -19,7 +19,7 @@ function StepOne(props) {
   } = props;
   return (
     <div>
-      <h1>Luwak White Kopi passwordnya?</h1>
+      <h1>Luwak White Coffee passwordnya?</h1>
       <Button className="btn btn-dark" onClick={handleClick} variant="contained">
         Kopi nikmat nyaman di kamu, tapi sayangnya aku cuma dianggep temanmu.
       </Button>
