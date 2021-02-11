@@ -259,7 +259,7 @@ function StepSix(props) {
   );
 
   const redirectWoi = () => {
-    window.open('http://febirthday.dondoitdev.tech', '_blank');
+    // window.open('http://febirthday.dondoitdev.tech', '_blank');
     window.location.href = 'http://febirthday.dondoitdev.tech';
     setLay(true);
     layout = 'Mengalihkan Duniamu...';
