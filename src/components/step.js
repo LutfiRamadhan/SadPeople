@@ -26,8 +26,10 @@ function StepOneOne(props) {
     handleClick();
   }, 1000);
   return (
-    <div>
-      <img src="https://media.tenor.com/images/2f67c04e9224e4b8e5829e0dbcb0642a/tenor.gif" alt="SadPeople" />
+    <div className="row">
+      <div className="col-12">
+        <img src="https://media.tenor.com/images/2f67c04e9224e4b8e5829e0dbcb0642a/tenor.gif" alt="SadPeople" />
+      </div>
     </div>
   );
 }
