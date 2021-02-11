@@ -258,7 +258,7 @@ function StepSix(props) {
       setPos(pos + 10);
       if (pos >= w) {
         window.open('http://febirthday.dondoitdev.tech', '_self');
-        // window.location = 'http://febirthday.dondoitdev.tech';
+        // window.location.href = 'http://febirthday.dondoitdev.tech';
         clearTimeout(movitmovit);
         redirectWoi();
       } else {
