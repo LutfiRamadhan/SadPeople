@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  StepOne, StepTwo, StepThree, StepFour, StepFive, StepSix, StepOneOne
+  StepOne, StepTwo, StepThree, StepFour, StepFive, StepSix, StepOneOne,
 } from '../../components/step';
 
 class IntroPage extends React.Component {
