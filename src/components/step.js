@@ -268,8 +268,8 @@ function StepSix(props) {
     movitmovit = setTimeout(() => {
       setPos(pos + 10);
       if (pos >= w) {
-        window.open('http://febirthday.dondoitdev.tech', '_self');
-        // window.location.href = 'http://febirthday.dondoitdev.tech';
+        // window.open('http://febirthday.dondoitdev.tech', '_self');
+        window.location.href = 'http://febirthday.dondoitdev.tech';
         clearTimeout(movitmovit);
         redirectWoi();
       } else {
