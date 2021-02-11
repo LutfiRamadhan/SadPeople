@@ -3,6 +3,15 @@ import {
   Button,
 } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import Sad from '../img/sad.gif';
+import HBD from '../img/hbd.gif';
+import Kerja from '../img/kerjakerjakerja.gif';
+import Makasih from '../img/makasih.gif';
+import Naon from '../img/naon.gif';
+import Party from '../img/party.gif';
+import BocilNyasar from '../img/bocil_nyasar.gif';
+import timHore from '../img/timhore.gif';
+import WAA from '../img/waaa.gif';
 
 function StepOne(props) {
   const {
@@ -27,8 +36,8 @@ function StepOneOne(props) {
   }, 1000);
   return (
     <div className="row">
-      <div className="col-12">
-        <img src="https://media.tenor.com/images/2f67c04e9224e4b8e5829e0dbcb0642a/tenor.gif" alt="SadPeople" />
+      <div className="col-6 offset-3">
+        <img src={Sad} alt="SadPeople" />
       </div>
     </div>
   );
@@ -80,7 +89,7 @@ function StepThree(props) {
   };
   return (
     <div>
-      <img src="https://c.tenor.com/vqxQwc7Mz-AAAAAj/%E3%81%AF%E3%81%A6%E3%81%AA-%E4%BD%95%E6%95%85.gif" alt="Boleh ya?Boleh ya?Boleh ya?" />
+      <img src={Naon} alt="Boleh ya?Boleh ya?Boleh ya?" />
       <h1>{text}</h1>
       <div className="col-md-3 offset-md-4">
         <div className="row">
@@ -114,7 +123,7 @@ function StepFour(props) {
 
   return (
     <div>
-      <img src="https://c.tenor.com/tX9__1gu5WkAAAAj/%E5%9C%9F%E4%B8%8B%E5%BA%A7-%E3%81%94%E3%82%81%E3%82%93.gif" alt="Boleh ya?Boleh ya?Boleh ya?" />
+      <img src={Makasih} alt="Makasih" />
       <h1>Makasih banget ni udah jadi temen buat aku nanya nanya yang ga penting</h1>
       <Button className="btn btn-dark" onClick={handleClick} variant="contained">
         Y
@@ -138,7 +147,7 @@ function StepFive(props) {
 
   return (
     <div>
-      <img src="https://c.tenor.com/CJSGt0M6gfIAAAAj/%E5%83%8D%E3%81%8F-%E3%82%BF%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0.gif" alt="kuy" />
+      <img src={Kerja} alt="Kerja! Kerja! Kerja!" />
       <h1>{text}</h1>
       {!isLoading ? (
         <Button className="btn btn-dark" onClick={handleClick} variant="contained">
@@ -193,10 +202,10 @@ function StepSix(props) {
             }
           >
             <div className="col-md-2 moving" style={Baris1}>
-              <img src="https://c.tenor.com/1RyBOGYiFroAAAAj/%E3%83%80%E3%83%B3%E3%82%B9-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
+              <img src={timHore} alt="Tim Hore" />
             </div>
             <div className="col-md-2 moving" style={Baris2}>
-              <img src="https://c.tenor.com/1RyBOGYiFroAAAAj/%E3%83%80%E3%83%B3%E3%82%B9-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
+              <img src={timHore} alt="Tim Hore" />
             </div>
           </div>
         </div>
@@ -212,38 +221,38 @@ function StepSix(props) {
             }
           >
             <div className="col-md-2 moving" style={Baris1}>
-              <img src="https://c.tenor.com/1RyBOGYiFroAAAAj/%E3%83%80%E3%83%B3%E3%82%B9-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
+              <img src={timHore} alt="Tim Hore" />
             </div>
             <div className="col-md-2 moving" style={Baris2}>
-              <img src="https://c.tenor.com/1RyBOGYiFroAAAAj/%E3%83%80%E3%83%B3%E3%82%B9-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
+              <img src={timHore} alt="Tim Hore" />
             </div>
           </div>
         </div>
       </div>
       <div className="row" style={(lay) ? { display: 'none' } : { display: '' }}>
         <div className="col-2">
-          <img src="https://c.tenor.com/GNiThyoqaXAAAAAj/%E3%81%8A%E3%82%81%E3%81%A7%E3%81%A8%E3%81%86-%E5%AC%89%E3%81%97%E3%81%84.gif" alt="kuy" />
+          <img src={HBD} alt="HBD" />
         </div>
         <div className="col-2 offset-8">
-          <img src="https://c.tenor.com/GNiThyoqaXAAAAAj/%E3%81%8A%E3%82%81%E3%81%A7%E3%81%A8%E3%81%86-%E5%AC%89%E3%81%97%E3%81%84.gif" style={{ transform: 'scaleX(-1)' }} alt="kuy" />
+          <img src={HBD} style={{ transform: 'scaleX(-1)' }} alt="HBD" />
         </div>
         <div className="col-2">
-          <img src="https://c.tenor.com/Aq48a65922EAAAAj/%E3%82%AF%E3%83%A9%E3%83%83%E3%82%AB%E3%83%BC-%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%83%BC.gif" alt="kuy" />
+          <img src={WAA} alt="kuy" />
         </div>
         <div className="col-2">
-          <img src="https://c.tenor.com/mx-SCGnsQOEAAAAj/%E6%8B%8D%E6%89%8B-%E3%83%91%E3%83%81%E3%83%91%E3%83%81.gif" alt="kuy" />
+          <img src={BocilNyasar} alt="bocil nyasar" />
         </div>
         <div className="col-2">
-          <img src="https://c.tenor.com/g7m_dcsETm4AAAAj/%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
+          <img src={Party} alt="disco party" />
         </div>
         <div className="col-2">
-          <img src="https://c.tenor.com/g7m_dcsETm4AAAAj/%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3-%E6%A5%BD%E3%81%97%E3%81%84.gif" alt="kuy" />
+          <img src={Party} alt="disco party" />
         </div>
         <div className="col-2">
-          <img src="https://c.tenor.com/mx-SCGnsQOEAAAAj/%E6%8B%8D%E6%89%8B-%E3%83%91%E3%83%81%E3%83%91%E3%83%81.gif" alt="kuy" />
+          <img src={BocilNyasar} alt="bocil nyasar" />
         </div>
         <div className="col-2">
-          <img src="https://c.tenor.com/Aq48a65922EAAAAj/%E3%82%AF%E3%83%A9%E3%83%83%E3%82%AB%E3%83%BC-%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%83%BC.gif" style={{ transform: 'scaleX(-1)' }} alt="kuy" />
+          <img src={WAA} style={{ transform: 'scaleX(-1)' }} alt="waa" />
         </div>
       </div>
     </>
